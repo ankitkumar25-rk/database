@@ -33,12 +33,22 @@ coverage/
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnpm-store/
+.cache/
+.vite/
+.eslintcache
+
+# Local database files
+*.sqlite
+*.sqlite3
+*.db
 
 # Editor and OS files
 .DS_Store
 Thumbs.db
 .vscode/
 .idea/
+*.swp
+*.swo
 
 # Temporary files
 tmp/
