@@ -61,6 +61,12 @@ show("collections");
 // db.users.find({ age: { $gte: 18, $lte: 20 } }).pretty();
 // db.users.find({ age: { $in: [5, 19] } }).pretty();
 
+// db.users.updateOne({ name: "Ankit" }, { $set: { age: 20 } });
+
+// // db.users.updateMany({ age: { $lt: 20 } }, { $set: { city: "jaipur" } });
+
+// db.users.find();
+
 // ecommerce database
 
 use("ecommerce");
@@ -98,7 +104,24 @@ show("collections");
 //   },
 // ]);
 
+// db.products.countDocuments({ category: "electronics" });
+// db.products.countDocuments();
+
+// db.products.updateOne({ name: "Iphone 14" }, { $set: { price: 170000 } });
+// db.products.updateMany({ category: "electronics" }, { $set: { stock: 20 } });
+// db.products.updateMany({ category: "electronics" }, { $inc: { stock: 5 } });
+
 // db.products.find();
 
-// db.products.countDocuments({ category: "electronics" });
-db.products.countDocuments();
+use("shopApp");
+
+// db.users.updateOne(
+//   { email: "Ankitgiaa@gmail.com" },
+//   { $set: { email: "Ankit@gmail.com" } },
+// );
+
+// db.users.deleteOne({ name: "Rohit" });
+
+db.users.deleteMany({ age: { $lt: 18 } });
+
+db.users.find();
